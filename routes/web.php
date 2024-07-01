@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\FakultasController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProgramStudiController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +18,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome_1');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/fakultas', FakultasController::class);
+Route::resource('/program-studi', ProgramStudiController::class);
