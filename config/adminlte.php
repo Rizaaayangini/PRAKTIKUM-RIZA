@@ -342,8 +342,12 @@ return [
                     'url' => '/program-studi',
                 ],
                 [
-                    'text' => 'Fakuiltas',
+                    'text' => 'Fakultas',
                     'url' => '/fakultas',
+                ],
+                [
+                    'text' => 'sekolah',
+                    'url' => '/sekolah',
                 ],
             ],
         ],
